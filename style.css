@@ -11,40 +11,32 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ecf0f1;
+    color: #34495e;
+    line-height: 1.5;
 }
 
-.content-overlay h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.content-overlay p {
-    font-size: 1.5rem;
-}
-
-/* Cabeçalho */
+/* Estilo do cabeçalho */
 .wiki-header {
     background-color: #2c3e50;
     color: #ecf0f1;
-    padding: 30px 0;
+    padding: 40px 0;
     text-align: center;
-    opacity: 0; /* Inicialmente invisível */
-    animation: slideDown 1s forwards; /* Animação de deslizar para baixo */
+    opacity: 0;
+    animation: slideDown 1s forwards;
 }
 
 .wiki-header img.skyrim-logo {
     width: 150px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .wiki-header h1 {
-    font-size: 3rem;
-    margin: 0;
+    font-size: 36px; /* Tamanho grande para o título */
+    margin-bottom: 10px;
 }
 
 .wiki-header p {
-    font-size: 1.5rem;
-    margin: 10px 0 0;
+    font-size: 24px; /* Subtítulo com tamanho médio */
 }
 
 /* Animação para o cabeçalho */
@@ -61,54 +53,52 @@ body {
 
 /* Barra de navegação */
 .navbar {
-    background-color: #222; /* Cor uniforme de fundo */
-    padding: 15px 0; /* Mais espaçamento vertical */
+    background-color: #34495e;
+    padding: 20px 0;
 }
 
-/* Itens de navegação */
 .navbar-nav {
     display: flex;
-    justify-content: center; /* Centraliza os itens */
-    gap: 20px; /* Espaço entre os itens */
-    list-style-type: none; /* Remove os pontos (bullets) */
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
 }
 
 .navbar-nav .nav-item {
-    padding: 5px 15px;
+    padding: 10px 20px;
 }
 
-/* Links da navegação */
 .navbar-nav .nav-link {
-    color: #fff !important; /* Cor dos links */
-    font-size: 1.1rem;
+    color: #ecf0f1;
+    font-size: 18px;
     font-weight: 500;
     text-transform: capitalize;
     padding: 8px 15px;
-    transition: color 0.3s ease, transform 0.3s ease;
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 /* Efeito de hover nos links */
 .navbar-nav .nav-link:hover {
-    color: #0f3e90 !important; /* Cor de hover laranja */
-    transform: scale(1.1); /* Aumenta o link suavemente */
+    color: #1abc9c;
+    transform: scale(1.1);
 }
 
 /* Estilo para os links ativos */
 .navbar-nav .nav-item.active .nav-link {
-    color: #1c1c47 !important; /* Cor laranja para o item ativo */
+    color: #f39c12;
 }
 
-/* Responsividade: menu no mobile */
+/* Responsividade no mobile */
 @media (max-width: 768px) {
     .navbar-nav {
-        flex-direction: column; /* Coloca os itens em uma coluna no mobile */
-        text-align: center; /* Centraliza os itens no mobile */
-        gap: 10px; /* Menos espaçamento no mobile */
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
     }
 
     .navbar-nav .nav-link {
-        font-size: 1.2rem;
+        font-size: 20px;
         padding: 12px 20px;
     }
 }
@@ -132,7 +122,7 @@ body {
 
 /* Estilo do botão de toggler no mobile */
 .navbar-toggler {
-    background-color: #333 !important;
+    background-color: #333;
     border-radius: 4px;
 }
 
@@ -144,12 +134,12 @@ body {
 .city-links {
     background-color: #34495e;
     padding: 30px 0;
-    color: #fff;
     text-align: center;
 }
 
 .city-links h3 {
-    font-size: 2rem;
+    font-size: 32px;
+    color: #ecf0f1;
     margin-bottom: 20px;
 }
 
@@ -166,13 +156,13 @@ body {
 .city-links ul li a {
     color: #ecf0f1;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 20px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .city-links ul li a:hover {
-    color: #2b3270;
+    color: #1abc9c;
 }
 
 /* Conteúdo Principal */
@@ -185,49 +175,47 @@ main {
 /* Estilos para as seções de conteúdo */
 .content-box {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .content-box h2 {
-    font-size: 2.5rem;
+    font-size: 32px;
     color: #2c3e50;
     margin-bottom: 20px;
 }
 
 .content-box p {
-    font-size: 1.2rem;
+    font-size: 18px;
     color: #7f8c8d;
-    line-height: 1.6;
 }
 
 /* Estilo para listas de itens */
 .content-box ul {
-    list-style-type: none; /* Remove os marcadores padrão */
+    list-style-type: none;
     padding-left: 0;
-    margin-top: 20px;
 }
 
 .content-box ul li {
-    font-size: 1.2rem;
-    color: #34495e; /* Cor do texto dos itens */
+    font-size: 20px;
+    color: #34495e;
     margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: #ecf0f1; /* Fundo suave para cada item */
-    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
     transition: all 0.3s ease;
     display: flex;
-    align-items: center; /* Alinha o conteúdo na vertical */
-    justify-content: space-between; /* Para ter um bom espaçamento no item */
+    align-items: center;
+    justify-content: space-between;
 }
 
 .content-box ul li:hover {
-    background-color: #5d5ac3; /* Cor de fundo ao passar o mouse */
-    color: #fff; /* Cor do texto ao passar o mouse */
-    transform: translateX(10px); /* Animação de deslocamento suave */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efeito de destaque */
+    background-color: #5d5ac3;
+    color: #fff;
+    transform: translateX(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .content-box ul li strong {
@@ -235,26 +223,16 @@ main {
     color: #2c3e50;
 }
 
-/* Adicionando um ícone de marcador para os itens */
-.content-box ul li::before {
-    content: "\2022"; /* Símbolo de ponto */
-    font-size: 30px;
-    color: #0022ab; /* Cor do ponto */
-    margin-right: 15px; /* Espaçamento entre o ponto e o texto */
-    transform: translateY(2px); /* Para alinhar o ponto com o texto */
-}
-
-/* Adicionando ícones para melhorar a interatividade */
+/* Adicionando ícones */
 .content-box ul li .item-icon {
-    font-size: 20px;
+    font-size: 22px;
     color: #022b6a;
     margin-right: 15px;
 }
 
-/* Opção para incluir ícones, caso necessário */
 .content-box ul li:hover .item-icon {
-    color: #fff; /* Mudando a cor do ícone ao passar o mouse */
-    transform: rotate(20deg); /* Pequena animação no ícone */
+    color: #fff;
+    transform: rotate(20deg);
 }
 
 /* Rodapé */
@@ -266,6 +244,6 @@ footer {
 }
 
 footer p {
-    font-size: 1rem;
+    font-size: 16px;
     margin: 0;
 }
