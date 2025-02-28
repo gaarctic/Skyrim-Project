@@ -10,8 +10,8 @@ Welcome to **Guide to Skyrim**, a fan-made project dedicated to exploring the ri
 - 🧩 **Curiosities**: Dive into hidden secrets, side stories, and the many mysteries of Tamriel.
 
 ## 🚀 Technologies Used
-- **HTML, CSS & Bootstrap** – For responsive and stylish layouts.
-- **JavaScript** (future implementations) – Enhancing interactivity.
+- **HTML, CSS** – For responsive and stylish layouts.
+- **JavaScript** – Enhancing interactivity.
 
 ## 🎮 How to Use
 1. Clone the repository:
