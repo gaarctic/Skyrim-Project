@@ -1,249 +1,222 @@
-/* Reset Básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Estilos gerais */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ecf0f1;
-    color: #34495e;
-    line-height: 1.5;
+    font-family: 'Cinzel', serif; 
+    color: #000000; 
+    line-height: 1.2; 
+    padding-top: 120px; 
+    
 }
 
-/* Estilo do cabeçalho */
+/* Cabeçalho */
 .wiki-header {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 40px 0;
-    text-align: center;
-    opacity: 0;
-    animation: slideDown 1s forwards;
-}
-
-.wiki-header img.skyrim-logo {
-    width: 150px;
-    margin-bottom: 20px;
-}
-
-.wiki-header h1 {
-    font-size: 36px; /* Tamanho grande para o título */
-    margin-bottom: 10px;
-}
-
-.wiki-header p {
-    font-size: 24px; /* Subtítulo com tamanho médio */
-}
-
-/* Animação para o cabeçalho */
-@keyframes slideDown {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Barra de navegação */
-.navbar {
-    background-color: #34495e;
-    padding: 20px 0;
-}
-
-.navbar-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    list-style-type: none;
-}
-
-.navbar-nav .nav-item {
-    padding: 10px 20px;
-}
-
-.navbar-nav .nav-link {
-    color: #ecf0f1;
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: capitalize;
-    padding: 8px 15px;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Efeito de hover nos links */
-.navbar-nav .nav-link:hover {
-    color: #1abc9c;
-    transform: scale(1.1);
-}
-
-/* Estilo para os links ativos */
-.navbar-nav .nav-item.active .nav-link {
-    color: #f39c12;
-}
-
-/* Responsividade no mobile */
-@media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 20px;
-        padding: 12px 20px;
-    }
-}
-
-/* Animação da barra de navegação */
-.navbar {
-    opacity: 0;
-    animation: slideIn 1s forwards;
+    background: linear-gradient(135deg, #221313, #f9ecec);
+    color: #090202;
+    padding: 70px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transform: translateY(0); 
 }
 
 @keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0); 
+    }
+}
+
+.wiki-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.wiki-header .skyrim-logo {
+    width: 80px; 
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+
+.wiki-header .skyrim-logo:hover {
+    transform: scale(1.1); 
+}
+
+.wiki-header h1 {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+}
+
+.wiki-header p {
+    font-size: 1.5em;
+    font-weight: lighter;
+    font-family: 'Cinzel', serif;
+}
+
+/* Tela de Loading */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.loading-logo {
+    width: 150px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
     0% {
-        transform: translateY(-50px);
-        opacity: 0;
+        transform: rotate(0deg);
     }
     100% {
-        transform: translateY(0);
-        opacity: 1;
+        transform: rotate(360deg);
     }
 }
 
-/* Estilo do botão de toggler no mobile */
-.navbar-toggler {
-    background-color: #333;
-    border-radius: 4px;
+#loading.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
-.navbar-toggler:focus {
-    outline: none;
-}
-
-/* Links para outras cidades */
+/* Links das cidades */
 .city-links {
-    background-color: #34495e;
-    padding: 30px 0;
+    background-color: #d7d7d7;
+    padding: 30px 20px;
+    margin-top: 120px;
+    color: #3c0404;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(253, 253, 253);
 }
 
 .city-links h3 {
-    font-size: 32px;
-    color: #ecf0f1;
+    font-size: 30px;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
 }
 
 .city-links ul {
     list-style-type: none;
-    padding: 0;
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    
 }
 
 .city-links ul li {
-    display: inline-block;
-    margin: 0 15px;
+    display: inline-block; 
 }
 
 .city-links ul li a {
-    color: #ecf0f1;
+    color: #790000;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 1.3em;
+    font-weight: 600;
     transition: color 0.3s ease;
+    font-family:'Cinzel', serif;
 }
 
 .city-links ul li a:hover {
-    color: #1abc9c;
+    color: #10040b;
+    text-decoration: underline;
 }
 
-/* Conteúdo Principal */
-main {
-    padding: 40px 0;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Estilos para as seções de conteúdo */
-.content-box {
-    background-color: #fff;
-    padding: 30px;
+/* Estilo do conteúdo */
+main .content-box {
+    background-color: #341c1c; 
+    padding: 50px; 
     margin-bottom: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #b3a7a7, #ffffff);
+    border-left: 6px solid #1a1a1a;
+    overflow: hidden;
+    font-family: 'Cinzel', serif; 
+}
+
+.content-box:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25); 
 }
 
 .content-box h2 {
-    font-size: 32px;
-    color: #2c3e50;
-    margin-bottom: 20px;
+    font-size: 2.2em; 
+    margin-bottom: 30px; 
+    font-weight: 700;
+    color: #590000;
+    letter-spacing: 2px; 
+    text-transform: uppercase;
+    border-bottom: 4px solid #0c0b08; 
+    padding-bottom: 15px; 
 }
 
-.content-box p {
-    font-size: 18px;
-    color: #7f8c8d;
-}
-
-/* Estilo para listas de itens */
 .content-box ul {
     list-style-type: none;
     padding-left: 0;
 }
 
 .content-box ul li {
-    font-size: 20px;
-    color: #34495e;
-    margin-bottom: 20px;
-    padding: 15px 20px;
-    background-color: #ecf0f1;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.content-box ul li:hover {
-    background-color: #5d5ac3;
-    color: #fff;
-    transform: translateX(10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 25px 0; 
+    font-size: 1.3em; 
+    color: #060101;
+    line-height: 1.0; 
 }
 
 .content-box ul li strong {
+    color: #000;
     font-weight: bold;
-    color: #2c3e50;
 }
 
-/* Adicionando ícones */
-.content-box ul li .item-icon {
-    font-size: 22px;
-    color: #022b6a;
-    margin-right: 15px;
-}
-
-.content-box ul li:hover .item-icon {
-    color: #fff;
-    transform: rotate(20deg);
-}
 
 /* Rodapé */
 footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 20px 0;
+    background-color: #0a0a0a; 
+    color: #fff; 
     text-align: center;
+    padding: 20px 0; 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.5); 
+    font-family: 'Cinzel', serif; 
 }
 
 footer p {
-    font-size: 16px;
+    font-size: 1.2em;
+    font-weight: lighter;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px; 
+    }
+
+    footer p {
+        font-size: 1em; 
+    }
 }
