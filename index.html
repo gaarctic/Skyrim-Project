@@ -115,10 +115,9 @@
             document.addEventListener("DOMContentLoaded", function () {
                 setTimeout(() => { 
                     document.getElementById('loading').classList.add('hidden'); 
-                }, 1500); // Após 1,5 segundos, a tela de loading desaparece
+                }, 1500); 
             });
-
-            // Menu responsivo
+            
             document.getElementById('menu-toggle').addEventListener('click', function() {
                 document.querySelector('.nav-menu').classList.toggle('active');
             });
